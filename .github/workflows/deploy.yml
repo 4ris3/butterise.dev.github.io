@@ -30,11 +30,20 @@ jobs:
       - name: Install dependencies
         run: npm ci
       
+      - name: Show current directory
+        run: pwd && ls -la
+      
       - name: Build site
         run: npm run build:prod
       
-      - name: List build output
-        run: ls -la dist/
+      - name: Show build output
+        run: |
+          echo "=== Contents of dist/ ==="
+          ls -la dist/ || echo "dist/ directory not found"
+          echo "=== Contents of current directory ==="
+          ls -la
+          echo "=== Contents of public/ ==="
+          ls -la public/ || echo "public/ directory not found"
       
       - name: Upload to GitHub Pages
         uses: actions/upload-pages-artifact@v3
