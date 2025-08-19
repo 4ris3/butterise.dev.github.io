@@ -37,7 +37,7 @@ For any questions regarding your privacy or the app, please contact us:
 ---
 
 <div class="mt-8 text-center">
-  <a href="/" class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-white font-medium rounded-lg transition-all duration-200">
+  <a href="" class="inline-flex items-center px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-medium rounded-lg transition-all duration-200">
     ← Back to Home
   </a>
 </div>

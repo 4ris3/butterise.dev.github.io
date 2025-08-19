@@ -16,16 +16,40 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-200">
+  <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
     <div class="min-h-screen">
       <header class="border-b border-gray-200 dark:border-gray-700">
         <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 class="text-xl font-bold">Butterise.dev</h1>
-          <button
-            id="theme-toggle"
-            class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-            aria-label="Toggle theme"
-          >
+          <a href="" class="hover:opacity-80 transition-opacity">
+            <h1 class="text-xl font-bold">Butterise.dev</h1>
+          </a>
+          <div class="flex items-center space-x-2">
+            <button
+              id="language-toggle"
+              class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+              aria-label="Toggle language"
+            >
+              <!-- Polish Flag (when on English version) -->
+              <svg id="polish-flag" class="w-5 h-5" viewBox="0 0 640 480">
+                <g fill-rule="evenodd" stroke-width="1pt">
+                  <path fill="#fff" d="M640 480H0V0h640z"/>
+                  <path fill="#dc143c" d="M640 480H0V240h640z"/>
+                </g>
+              </svg>
+              <!-- English Flag (when on Polish version) -->
+              <svg id="english-flag" class="w-5 h-5 hidden" viewBox="0 0 640 480">
+                <path fill="#012169" d="M0 0h640v480H0z"/>
+                <path fill="#FFF" d="m75 0 244 181L562 0h78v62L400 241l240 178v61h-80L320 301 81 480H0v-60l239-178L0 64V0h75z"/>
+                <path fill="#C8102E" d="m424 281 216 159v40L369 281h55zm-184 20 6 35L54 480H0l240-179zM640 0v3L391 191l2-44L590 0h50zM0 0l239 176h-60L0 42V0z"/>
+                <path fill="#FFF" d="M241 0v480h160V0H241zM0 160v160h640V160H0z"/>
+                <path fill="#C8102E" d="M0 193v96h640v-96H0zM273 0v480h96V0h-96z"/>
+              </svg>
+            </button>
+            <button
+              id="theme-toggle"
+              class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+              aria-label="Toggle theme"
+            >
             <svg id="sun-icon" class="w-5 h-5 hidden dark:block" fill="currentColor" viewBox="0 0 20 20">
               <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"></path>
             </svg>
@@ -42,7 +66,7 @@ const { title } = Astro.props;
       
       <footer class="border-t border-gray-200 dark:border-gray-700 mt-auto">
         <div class="max-w-4xl mx-auto px-4 py-6 text-center text-gray-600 dark:text-gray-400">
-          <p>&copy; 2024 Butterise.dev. All rights reserved.</p>
+          <p>&copy; 2025 Butterise.dev. All rights reserved.</p>
         </div>
       </footer>
     </div>
@@ -60,6 +84,37 @@ const { title } = Astro.props;
       themeToggle?.addEventListener('click', () => {
         const isDark = document.documentElement.classList.toggle('dark');
         localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      });
+
+      // Language switcher functionality
+      const languageToggle = document.getElementById('language-toggle');
+      const polishFlag = document.getElementById('polish-flag');
+      const englishFlag = document.getElementById('english-flag');
+      
+      // Check current language and show appropriate flag
+      const currentPath = window.location.pathname;
+      const isPolish = currentPath.includes('/pl/');
+      
+      if (isPolish) {
+        // Show English flag when on Polish version
+        polishFlag?.classList.add('hidden');
+        englishFlag?.classList.remove('hidden');
+      } else {
+        // Show Polish flag when on English version
+        polishFlag?.classList.remove('hidden');
+        englishFlag?.classList.add('hidden');
+      }
+      
+      languageToggle?.addEventListener('click', () => {
+        if (isPolish) {
+          // Currently on Polish, go to English
+          const englishPath = currentPath.replace('/pl/', '/');
+          window.location.href = englishPath || '/';
+        } else {
+          // Currently on English, go to Polish
+          const polishPath = '/pl' + currentPath;
+          window.location.href = polishPath;
+        }
       });
     </script>
   </body>
