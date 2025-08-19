@@ -37,7 +37,7 @@ W przypadku pytań dotyczących Twojej prywatności lub aplikacji, skontaktuj si
 ---
 
 <div class="mt-8 text-center">
-  <a href="" class="inline-flex items-center px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-medium rounded-lg transition-all duration-200">
+  <a href="../" class="inline-flex items-center px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-medium rounded-lg transition-all duration-200">
     ← Powrót do strony głównej
   </a>
 </div>

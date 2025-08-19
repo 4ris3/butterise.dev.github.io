@@ -20,9 +20,9 @@ const { title } = Astro.props;
     <div class="min-h-screen">
       <header class="border-b border-gray-200 dark:border-gray-700">
         <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
-          <a href="" class="hover:opacity-80 transition-opacity">
-            <h1 class="text-xl font-bold">Butterise.dev</h1>
-          </a>
+                          <a href="/butterise.dev.github.io/" class="hover:opacity-80 transition-opacity">
+                  <h1 class="text-xl font-bold">Butterise.dev</h1>
+                </a>
           <div class="flex items-center space-x-2">
             <button
               id="language-toggle"
@@ -105,17 +105,19 @@ const { title } = Astro.props;
         englishFlag?.classList.add('hidden');
       }
       
-      languageToggle?.addEventListener('click', () => {
-        if (isPolish) {
-          // Currently on Polish, go to English
-          const englishPath = currentPath.replace('/pl/', '/');
-          window.location.href = englishPath || '/';
-        } else {
-          // Currently on English, go to Polish
-          const polishPath = '/pl' + currentPath;
-          window.location.href = polishPath;
-        }
-      });
+              languageToggle?.addEventListener('click', () => {
+          if (isPolish) {
+            // Currently on Polish, go to English
+            const englishPath = currentPath.replace('/pl/', '/');
+            window.location.href = englishPath || '/';
+          } else {
+            // Currently on English, go to Polish
+            // Add /pl/ after the base path
+            const basePath = '/butterise.dev.github.io';
+            const polishPath = basePath + '/pl' + currentPath.replace(basePath, '');
+            window.location.href = polishPath;
+          }
+        });
     </script>
   </body>
 </html>
