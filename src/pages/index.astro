@@ -1,0 +1,107 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Butterise.dev - Home">
+  <div class="text-center space-y-8">
+    <div class="space-y-4">
+      <h1 class="text-5xl font-bold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent">
+        Butterise.dev
+      </h1>
+      <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+        Indie dev studio creating mobile apps like Autra.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+      <a href="/privacy" class="group">
+        <div class="p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-yellow-400 dark:hover:border-yellow-500 transition-all duration-200 hover:shadow-lg">
+          <h3 class="text-lg font-semibold mb-2 group-hover:text-yellow-600 dark:group-hover:text-yellow-400">
+            Privacy Policy
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">
+            Learn about how we handle your data and privacy.
+          </p>
+        </div>
+      </a>
+
+      <a href="/terms" class="group">
+        <div class="p-6 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-yellow-400 dark:hover:border-yellow-500 transition-all duration-200 hover:shadow-lg">
+          <h3 class="text-lg font-semibold mb-2 group-hover:text-yellow-600 dark:group-hover:text-yellow-400">
+            Terms of Service
+          </h3>
+          <p class="text-gray-600 dark:text-gray-400 text-sm">
+            Read our terms and conditions of service.
+          </p>
+        </div>
+      </a>
+    </div>
+
+    <div class="pt-8">
+      <p class="text-gray-500 dark:text-gray-400">
+        Crafting digital experiences with passion and precision.
+      </p>
+    </div>
+  </div>
+
+              <!-- Projects Section -->
+              <div class="mt-16 border-t border-gray-200 dark:border-gray-700 pt-12">
+                <div class="text-center mb-12">
+                  <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                    Projects
+                  </h2>
+                  <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                    Discover our latest mobile applications and digital solutions
+                  </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                  <!-- Autra Project Card -->
+                  <div class="bg-butter-50 dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 overflow-hidden group">
+                    <div class="p-6">
+                      <!-- App Icon -->
+                      <div class="w-16 h-16 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300">
+                        <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                      </div>
+
+                      <!-- Project Info -->
+                      <div class="text-center">
+                        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                          Autra
+                        </h3>
+                        <p class="text-gray-600 dark:text-gray-300 text-sm mb-4 leading-relaxed">
+                          Car expense & fuel tracker designed for simplicity, privacy and offline-first use.
+                        </p>
+                        
+                        <!-- Status Badge -->
+                        <div class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-amber-100 text-amber-800 dark:bg-amber-900 dark:text-amber-200 mb-4">
+                          <span class="w-2 h-2 bg-amber-500 rounded-full mr-2 animate-pulse"></span>
+                          In development
+                        </div>
+
+                        <!-- Learn More Button -->
+                        <a href="/autra" class="inline-flex items-center px-4 py-2 bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-white text-sm font-medium rounded-lg transition-all duration-200 group-hover:from-yellow-500 group-hover:to-orange-600">
+                          Learn more
+                          <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Placeholder for future projects -->
+                  <div class="bg-gray-50 dark:bg-gray-900 rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-600 flex items-center justify-center min-h-[280px] opacity-60">
+                    <div class="text-center text-gray-500 dark:text-gray-400">
+                      <svg class="w-12 h-12 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                      </svg>
+                      <p class="text-sm font-medium">More projects coming soon</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Layout>
