@@ -8,11 +8,13 @@ layout: ../layouts/PageLayout.astro
 _Autra is a privacy-first mobile app for tracking car expenses, refuels, and trips — designed for real drivers, not just data geeks._
 
 <div class="my-6 text-center">
-  <a href="https://apple.co/4lFBbGr">
+  <a href="https://apple.co/4lFBbGr" aria-label="Download Autra on the App Store">
     <img 
-      src="/badges/pre-order-on-white.svg" 
-      alt="Pre-order on the App Store"
+      src="/badges/black.svg" 
+      alt="Download on the App Store"
       class="mx-auto h-12"
+      loading="eager"
+      decoding="async"
     />
   </a>
 </div>
@@ -25,10 +27,12 @@ _Autra is a privacy-first mobile app for tracking car expenses, refuels, and tri
 
 <div class="my-8 text-center">
   <img 
-    src="autra-promo.png" 
+    src="/autra-promo.png" 
     alt="Autra app interface showing car expense tracking features" 
     class="max-w-full h-auto rounded-lg shadow-lg mx-auto"
     style="max-width: 600px;"
+    loading="lazy"
+    decoding="async"
   />
   <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
     Track your car expenses with ease
@@ -43,9 +47,10 @@ _Autra is a privacy-first mobile app for tracking car expenses, refuels, and tri
 
 ## 📱 Status
 
-The app is currently in **active development** and will be released on Android & iOS.
+**Available now** on iOS • Current version: **1.0.0**  
+Click the badge above to download from the App Store.
 
-Want to test it or follow progress?  
+Want to follow progress or test new features?  
 📩 Contact us: [arise2137@gmail.com](mailto:arise2137@gmail.com)
 
 ---
