@@ -7,11 +7,21 @@ layout: ../layouts/PageLayout.astro
 
 _Autra is a privacy-first mobile app for tracking car expenses, refuels, and trips — designed for real drivers, not just data geeks._
 
+<div class="my-6 text-center">
+  <a href="https://apple.co/4lFBbGr">
+    <img 
+      src="/badges/pre-order-on-white.svg" 
+      alt="Pre-order on the App Store"
+      class="mx-auto h-12"
+    />
+  </a>
+</div>
+
 ## 🚗 What it does
 
 - Track fuelings, expenses, mileage and routes  
-- Calculate average consumption, cost per 100km/mi, and vehicle stats  
-- All offline, no account needed
+- Calculate average consumption, cost per 100 km/mi, and vehicle stats  
+- Works offline, no account needed
 
 <div class="my-8 text-center">
   <img 
@@ -43,7 +53,7 @@ Want to test it or follow progress?
 Made by [Butterise.dev](/butterise.dev.github.io) — crafting mobile tools with care.
 
 <div class="mt-8 text-center">
-  <a href="" class="inline-flex items-center px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-medium rounded-lg transition-all duration-200">
+  <a href="/" class="inline-flex items-center px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-medium rounded-lg transition-all duration-200">
     ← Back to Home
   </a>
 </div>
