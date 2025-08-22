@@ -11,7 +11,7 @@ _Autra is a privacy-first mobile app for tracking car expenses, refuels, and tri
   <a href="https://apple.co/4lFBbGr" aria-label="Download Autra on the App Store">
     <!-- Light mode badge -->
     <img 
-      src="/badges/black.svg" 
+      src="../badges/black.svg" 
       alt="Download on the App Store"
       class="mx-auto h-12 dark:hidden"
       loading="eager"
@@ -19,7 +19,7 @@ _Autra is a privacy-first mobile app for tracking car expenses, refuels, and tri
     />
     <!-- Dark mode badge -->
     <img 
-      src="/badges/white.svg" 
+      src="../badges/white.svg" 
       alt="Download on the App Store"
       class="mx-auto h-12 hidden dark:inline-block"
       loading="eager"
@@ -36,7 +36,7 @@ _Autra is a privacy-first mobile app for tracking car expenses, refuels, and tri
 
 <div class="my-8 text-center">
   <img 
-    src="/autra-promo.png" 
+    src="../autra-promo.png" 
     alt="Autra app interface showing car expense tracking features" 
     class="max-w-full h-auto rounded-lg shadow-lg mx-auto"
     style="max-width: 600px;"
@@ -64,11 +64,10 @@ Want to follow progress or test new features?
 
 ---
 
-Made by [Butterise.dev](/butterise.dev.github.io) — crafting mobile tools with care.
+Made by [Butterise.dev](../) — crafting mobile tools with care.
 
 <div class="mt-8 text-center">
-  <!-- Link do Home jako absolutny URL projektu (bezpieczny na subpath) -->
-  <a href="/butterise.dev.github.io/" class="inline-flex items-center px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-medium rounded-lg transition-all duration-200">
+  <a href="../" class="inline-flex items-center px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-medium rounded-lg transition-all duration-200">
     ← Back to Home
   </a>
 </div>
