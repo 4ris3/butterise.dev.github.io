@@ -9,10 +9,19 @@ _Autra is a privacy-first mobile app for tracking car expenses, refuels, and tri
 
 <div class="my-6 text-center">
   <a href="https://apple.co/4lFBbGr" aria-label="Download Autra on the App Store">
+    <!-- Light mode badge -->
     <img 
       src="/badges/black.svg" 
       alt="Download on the App Store"
-      class="mx-auto h-12"
+      class="mx-auto h-12 dark:hidden"
+      loading="eager"
+      decoding="async"
+    />
+    <!-- Dark mode badge -->
+    <img 
+      src="/badges/white.svg" 
+      alt="Download on the App Store"
+      class="mx-auto h-12 hidden dark:inline-block"
       loading="eager"
       decoding="async"
     />
@@ -58,7 +67,8 @@ Want to follow progress or test new features?
 Made by [Butterise.dev](/butterise.dev.github.io) — crafting mobile tools with care.
 
 <div class="mt-8 text-center">
-  <a href="/" class="inline-flex items-center px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-medium rounded-lg transition-all duration-200">
+  <!-- Link do Home jako absolutny URL projektu (bezpieczny na subpath) -->
+  <a href="/butterise.dev.github.io/" class="inline-flex items-center px-6 py-3 bg-yellow-500 hover:bg-yellow-600 text-white font-medium rounded-lg transition-all duration-200">
     ← Back to Home
   </a>
 </div>
